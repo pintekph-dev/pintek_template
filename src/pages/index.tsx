@@ -35,10 +35,10 @@ export default function Home() {
           10
         </div>
         <div className={scss.card+' '+scss.w20}>
-          10
+          11
         </div>
         <div className={scss.card+' '+scss.w20}>
-          10
+          12
         </div>
       </div>
     </div>
