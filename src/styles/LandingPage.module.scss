@@ -1,0 +1,10 @@
+@use '@styles/helpers';
+@use '@styles/colors' as *;
+@reference 'tailwindcss';
+.appWrapper{
+    @apply p-5;
+    .card{
+        border: 1px solid $blue;
+        @apply p-5 rounded-[20px];
+    }
+}

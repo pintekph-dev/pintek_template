@@ -1,0 +1,54 @@
+
+@reference 'tailwindcss';
+
+.cards {
+    @apply flex flex-row flex-wrap gap-2.5 my-5;
+
+    .card {
+        box-sizing: border-box;
+
+        &.w20 {
+            width: calc((100% - 40px) / 5);
+        }
+
+        &.w25 {
+            width: calc((100% - 30px) / 4);
+        }
+
+        &.w30 {
+            width: calc(30% - 10px);
+        }
+
+        &.w33 {
+            width: calc((100% - 20px) / 3);
+        }
+
+        &.w40 {
+            width: calc(40% - 10px);
+        }
+
+        &.w50 {
+            width: calc((100% - 10px) / 2);
+        }
+
+        &.w60 {
+            width: calc(60% - 10px);
+        }
+
+        &.w70 {
+            width: calc(70% - 10px);
+        }
+
+        &.w75 {
+            width: calc(75% - 10px);
+        }
+
+        &.w80 {
+            width: calc(80% - 10px);
+        }
+
+        &.w100 {
+            width: 100%;
+        }
+    }
+}
