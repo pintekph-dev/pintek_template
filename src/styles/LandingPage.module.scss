@@ -1,10 +1,18 @@
+@use '@styles/forms';
 @use '@styles/helpers';
 @use '@styles/colors' as *;
 @reference 'tailwindcss';
 .appWrapper{
     @apply p-5;
-    .card{
-        border: 1px solid $blue;
-        @apply p-5 rounded-[20px];
+
+    .formWrapper{
+        @apply w-120 mx-auto mt-10 relative;
+
+        .button{
+            @apply w-80 mx-auto block;
+        }
+    }
+    .test{
+        color: $blue;
     }
 }

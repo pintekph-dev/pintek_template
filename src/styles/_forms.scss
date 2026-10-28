@@ -1,0 +1,116 @@
+@use '@/styles/colors' as *;
+@reference 'tailwindcss';
+.npt{
+    @apply flex relative w-full pb-7.5;
+    &.err{
+        @apply relative;
+        textarea, select, input[type=text], input[type=email], input[type=password], input[type=file]
+        {
+        border: 1px solid rgba($red, .6);
+        }
+        .errmsg{
+        @apply text-[10px] absolute bottom-3.5 right-0;
+        color: $red;
+        }
+    }
+    &:disabled, &.disabled{
+        pointer-events: none;
+        span{
+            display: none;
+        }
+        .lbl{
+            color: $gray;
+        }
+        input[type=text], input[type=email], select, textarea, input[type=password]{
+            color: $gray;
+            cursor: not-allowed;
+            background-image: none;
+            background-color: $gray;
+            border: 1px solid rgba($gray, .5);
+        }
+        .lbl{
+            margin: 0 2px;
+            display: inline;
+            span{
+                color: $red;
+            }
+        }
+    }
+	.lbl{
+    // font-weight: 600;
+    color: $black;
+    @apply absolute -top-3.75 left-0 text-[10px] uppercase;
+		span{
+			color: $red;
+            @apply text-[13px] float-right ml-1.25 -mt-0.75;
+		}
+	}
+    input[type=text], input[type=email], select, textarea, input[type=password]{
+        border: 1px solid $gray;
+        background-color: $white;
+        @apply px-2.5 py-2 text-[13px] w-full rounded-[10px] text-ellipsis;
+        
+        &:focus{
+        outline: none;
+        }
+        &:disabled{
+        border-color: $gray;
+        background-color: $gray;
+        @apply cursor-not-allowed;
+        }
+        &.lblContent{
+        border: 0;
+        color: $black;
+        border-bottom: 1px dashed $blue;
+        @apply w-full inline-block rounded-none text-[14px] mt-0 pl-1.25 pb-1.5;
+        }
+    }
+    select{
+        outline: none;
+        appearance: none;
+        background-color: $white;
+        background: $white url('/svgs/arrowDown.svg') no-repeat 96.5% 51%;
+        background-size: 12px;
+        @apply pr-3.75 mb-1 text-[12px] h-9.5 w-full clear-both float-left;
+    }
+}
+
+.button{
+  outline: none;
+  border: 1px solid;
+  text-decoration: none;
+  @apply rounded-[10px] w-full text-[12px] cursor-pointer uppercase py-2 px-2.5;
+  &.btnblue{
+    // background-color: rgba($blue, .6);
+    color: $white;
+    background-color: $blue;
+    border-color: $border_blue;
+  }
+  &.btngreen{
+    color: $white;
+    background-color: $green;
+    border-color: $border_green;
+  }
+  &.btnyellow{
+    color: $white;
+    background-color: $yellow;
+    border-color: $border_yellow;
+  }
+  &.btnorange{
+    color: $white;
+    background-color: $orange;
+    border-color: $border_orange;
+  }
+  &.btnred{
+    color: $white;
+    background-color: $red;
+    border-color: $border_red;
+  }
+  &.disabled, &:disabled{
+    @apply cursor-not-allowed pointer-events-none;
+    opacity: .6;
+    color: $darkgray;
+    background-color: $lightGray;
+    border-color: rgba($lightGray, .6);
+  }
+}
