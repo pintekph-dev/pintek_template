@@ -57,6 +57,218 @@
   color: $black;
 }
 
+.tracker {
+  @apply mt-6 rounded-lg border bg-white p-6 shadow-[0_2px_6px_rgb(0_0_0_/_0.05)];
+  border-color: $gray;
+}
+
+.profitSummary {
+  @apply relative mt-6 rounded-lg border bg-white p-6 shadow-[0_2px_6px_rgb(0_0_0_/_0.05)];
+  border-color: $gray;
+}
+
+.profitSummary h3,
+.profitSummary p {
+  @apply m-0;
+}
+
+.profitSummary h3 {
+  @apply text-lg font-bold;
+  color: $black;
+}
+
+.profitSummary p {
+  @apply mt-1 text-sm;
+  color: $darkGreen;
+}
+
+.profitStatus,
+.lossStatus {
+  @apply absolute right-6 top-6 rounded-full px-3 py-1 text-xs font-semibold;
+}
+
+.profitStatus {
+  @apply bg-green-100 text-green-700;
+}
+
+.lossStatus {
+  @apply bg-red-100 text-red-700;
+}
+
+.financialValues {
+  @apply mt-6 grid grid-cols-3 gap-5 max-[700px]:grid-cols-1;
+}
+
+.financialValues span,
+.financialValues strong {
+  @apply block;
+}
+
+.financialValues span {
+  @apply text-sm;
+  color: $darkGreen;
+}
+
+.financialValues strong {
+  @apply mt-2 text-xl;
+  color: $black;
+}
+
+.trackerHeader {
+  @apply flex items-start justify-between gap-4;
+}
+
+.trackerHeader h3,
+.trackerHeader p {
+  @apply m-0;
+}
+
+.trackerHeader h3 {
+  @apply text-lg font-bold;
+  color: $black;
+}
+
+.trackerHeader p {
+  @apply mt-1 text-sm;
+  color: $darkGreen;
+}
+
+.trackerHeader strong {
+  @apply whitespace-nowrap text-sm;
+  color: $blue;
+}
+
+.trendChart {
+  @apply mt-6 flex items-center gap-4 rounded-lg bg-[#f7f9fb] p-4;
+}
+
+.trendGraph {
+  @apply h-24 w-full max-w-sm overflow-visible;
+}
+
+.trendLine {
+  fill: none;
+  stroke: #14b11c;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.trendLine {
+  stroke-width: 3;
+}
+
+.trendPoint {
+  fill: #14b11c;
+}
+
+.trendSummary strong,
+.trendSummary span {
+  @apply block;
+}
+
+.trendSummary strong {
+  @apply text-2xl;
+  color: $black;
+}
+
+.trendSummary span {
+  @apply mt-1 text-sm;
+  color: $darkGreen;
+}
+
+.trendUp {
+  @apply text-green-600;
+}
+
+.monthlyValues {
+  @apply mt-4 grid grid-cols-6 gap-3;
+}
+
+.monthValue {
+  @apply rounded-md border p-3 text-center;
+  border-color: $gray;
+}
+
+.monthValue span,
+.monthValue strong {
+  @apply block;
+}
+
+.monthValue span {
+  @apply text-xs;
+  color: $darkGreen;
+}
+
+.monthValue strong {
+  @apply mt-1;
+  color: $black;
+}
+
+.subscriptionChart {
+  @apply mt-6 rounded-lg border bg-white p-6 shadow-[0_2px_6px_rgb(0_0_0_/_0.05)];
+  border-color: $gray;
+}
+
+.subscriptionChart h3,
+.subscriptionChart p {
+  @apply m-0;
+}
+
+.subscriptionChart h3 {
+  @apply text-lg font-bold;
+  color: $black;
+}
+
+.subscriptionChart p {
+  @apply mt-1 text-sm;
+  color: $darkGreen;
+}
+
+.pieContent {
+  @apply mt-6 flex items-center gap-8 max-[700px]:flex-col;
+}
+
+.pieChart {
+  width: 180px;
+  height: 180px;
+  flex: 0 0 auto;
+  border-radius: 9999px;
+  background: conic-gradient(
+    #9333ea 0deg 162deg,
+    #2563eb 162deg 288deg,
+    #9ca3af 288deg 360deg
+  );
+}
+
+.chartLegend {
+  @apply flex flex-col gap-3;
+}
+
+.legendItem {
+  @apply flex min-w-48 items-center gap-2 text-sm;
+  color: $black;
+}
+
+.legendItem strong {
+  @apply ml-auto;
+}
+
+.legendDot {
+  @apply h-3 w-3 rounded-full;
+}
+
+.premiumSlice {
+  @apply bg-purple-600;
+}
+
+.standardSlice {
+  @apply bg-blue-600;
+}
+
+.freeSlice {
+  @apply bg-gray-400;
+}
+
 .tableWrapper {
   @apply mt-6 overflow-x-auto;
   @include admin.panel;
@@ -124,6 +336,9 @@
 }
 
 :global(body.adminDark) .statCard,
+:global(body.adminDark) .profitSummary,
+:global(body.adminDark) .tracker,
+:global(body.adminDark) .subscriptionChart,
 :global(body.adminDark) .tableWrapper {
   border-color: #374151;
   background: #1f2937;
@@ -136,8 +351,46 @@
 
 :global(body.adminDark) .intro p,
 :global(body.adminDark) .statCard span,
+:global(body.adminDark) .profitSummary h3,
+:global(body.adminDark) .financialValues strong,
+:global(body.adminDark) .trackerHeader h3,
+:global(body.adminDark) .chartLabel,
 :global(body.adminDark) .userTable td {
   color: #d1d5db;
+}
+
+:global(body.adminDark) .trackerHeader p,
+:global(body.adminDark) .trendSummary span,
+:global(body.adminDark) .monthValue span {
+  color: #9ca3af;
+}
+
+:global(body.adminDark) .trendChart,
+:global(body.adminDark) .monthValue {
+  border-color: #374151;
+  background: #111827;
+}
+
+:global(body.adminDark) .trendSummary strong,
+:global(body.adminDark) .monthValue strong {
+  color: #f9fafb;
+}
+
+:global(body.adminDark) .trendLine {
+  stroke: #4ade80;
+}
+
+:global(body.adminDark) .trendPoint {
+  fill: #4ade80;
+}
+
+:global(body.adminDark) .subscriptionChart h3,
+:global(body.adminDark) .legendItem {
+  color: #f9fafb;
+}
+
+:global(body.adminDark) .chart {
+  border-color: #374151;
 }
 
 :global(body.adminDark) .userTable th {

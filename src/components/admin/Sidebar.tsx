@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import styles from '@styles/admin/sidebar.module.scss';
 
 export default function Sidebar() {
+  const router = useRouter();
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
@@ -27,13 +29,22 @@ export default function Sidebar() {
       <div className={styles.brand}>Admin Panel</div>
 
       <nav className={styles.navigation} aria-label="Admin navigation">
-        <Link className={styles.activeLink} href="/admin">
+        <Link
+          className={router.pathname === '/admin' ? styles.activeLink : styles.link}
+          href="/admin"
+        >
           Dashboard
         </Link>
-        <Link className={styles.link} href="/admin/users">
+        <Link
+          className={router.pathname === '/admin/users' ? styles.activeLink : styles.link}
+          href="/admin/users"
+        >
           Users
         </Link>
-        <Link className={styles.link} href="/admin/settings">
+        <Link
+          className={router.pathname === '/admin/settings' ? styles.activeLink : styles.link}
+          href="/admin/settings"
+        >
           Settings
         </Link>
       </nav>

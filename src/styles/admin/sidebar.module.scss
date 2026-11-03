@@ -1,7 +1,7 @@
 @use '../colors' as *;
 
 .sidebar {
-  @apply flex min-h-screen w-60 flex-col border-r-2 p-6 px-4 max-[700px]:min-h-0 max-[700px]:w-auto;
+  @apply sticky top-0 flex h-screen min-h-screen w-60 flex-col border-r-2 p-6 px-4 max-[700px]:static max-[700px]:h-auto max-[700px]:min-h-0 max-[700px]:w-auto;
   background: $blue;
   border-color: #005b91;
   color: $white;
