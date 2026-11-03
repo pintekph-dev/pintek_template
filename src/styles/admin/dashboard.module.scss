@@ -1,0 +1,58 @@
+@use '../colors' as *;
+
+.layout {
+  @apply flex min-h-screen max-[700px]:block;
+  background: #f7f9fb;
+}
+
+.contentWrapper {
+  @apply flex min-w-0 flex-1 flex-col;
+}
+
+.main {
+  @apply flex-1 p-8;
+}
+
+.content {
+  @apply mx-auto max-w-[1100px];
+}
+
+.intro h2,
+.intro p {
+  @apply m-0;
+}
+
+.intro h2 {
+  @apply text-2xl;
+  color: $black;
+}
+
+.intro p {
+  @apply mt-2;
+  color: $darkGreen;
+}
+
+.stats {
+  @apply mt-6 grid grid-cols-3 gap-5 max-[700px]:grid-cols-1;
+}
+
+.statCard {
+  @apply rounded-lg border bg-white p-6 shadow-[0_2px_6px_rgb(0_0_0_/_0.05)];
+  border: 1px solid $gray;
+  background: $white;
+}
+
+.statCard span,
+.statCard strong {
+  @apply block;
+}
+
+.statCard span {
+  @apply text-sm;
+  color: $darkGreen;
+}
+
+.statCard strong {
+  @apply mt-3 text-[1.75rem];
+  color: $black;
+}

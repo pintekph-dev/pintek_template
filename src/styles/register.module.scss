@@ -1,0 +1,78 @@
+@use './colors' as *;
+@use './helpers' as *;
+.appWrapper {
+  @apply min-h-screen flex items-center justify-center p-5;
+  background: $white;
+}
+
+.card {
+  @apply w-full max-w-md p-8 rounded-xl;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  border: 1px solid $gray;
+  background: $white;
+}
+
+.header {
+  @apply mb-6 text-center;
+
+  h1 {
+    @apply text-2xl font-bold;
+    color: $black;
+  }
+
+  p {
+    @apply mt-2 text-sm;
+    color: $gray;
+  }
+}
+
+.logo {
+  @apply w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-lg font-bold;
+  background: $blue;
+  color: $white;
+}
+
+.form {
+  @apply flex flex-col gap-5;
+}
+
+.field {
+  @apply flex flex-col gap-2;
+
+  label {
+    @apply text-sm font-medium;
+    color: $black;
+  }
+
+.input {
+    @apply w-full p-3 rounded-lg outline-none;
+    border: 1px solid $gray;
+
+    &:focus {
+      border-color: $blue;
+    }
+  }
+}
+
+.link {
+  @apply text-sm font-semibold;
+  color: $blue;
+
+  &:hover {
+    color: $darkGreen;
+  }
+}
+
+.registerButton {
+  @apply w-full p-3 rounded-lg font-semibold text-white cursor-pointer;
+  background: $blue;
+
+  &:hover {
+    background: $darkGreen;
+  }
+}
+
+.footer {
+  @apply mt-6 text-center text-sm;
+  color: $black;
+}

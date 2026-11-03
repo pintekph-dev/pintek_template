@@ -1,0 +1,27 @@
+@use '../colors' as *;
+
+.sidebar {
+  @apply min-h-screen w-60 p-6 px-4 max-[700px]:min-h-0 max-[700px]:w-auto;
+  background: $blue;
+  color: $white;
+}
+
+.brand {
+  @apply mb-8 text-xl font-bold;
+}
+
+.navigation {
+  @apply flex flex-col gap-2;
+}
+
+.link,
+.activeLink {
+  @apply block rounded-md p-3;
+  color: $white;
+  text-decoration: none;
+}
+
+.link:hover,
+.activeLink {
+  @apply bg-[#0e7490];
+}

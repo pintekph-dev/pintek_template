@@ -1,0 +1,32 @@
+@use '../colors' as *;
+
+.header {
+  @apply flex items-center justify-between border-b px-8 py-6;
+  border-bottom: 1px solid $gray;
+  background: $white;
+}
+
+.header h1,
+.header p {
+  @apply m-0;
+}
+
+.header h1 {
+  @apply text-2xl;
+  color: $black;
+}
+
+.header p {
+  @apply text-sm;
+  color: $darkGreen;
+}
+
+.logoutButton {
+  @apply cursor-pointer rounded-md border-0 px-4 py-2 text-sm;
+  background: $blue;
+  color: $white;
+}
+
+.logoutButton:hover {
+  @apply bg-[#0e7490];
+}
