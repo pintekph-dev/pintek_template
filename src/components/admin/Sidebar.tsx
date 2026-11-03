@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { addActivityLog } from '@/lib/adminActivity';
 import styles from '@styles/admin/sidebar.module.scss';
 
 export default function Sidebar() {
@@ -22,6 +23,7 @@ export default function Sidebar() {
     setIsDark(nextIsDark);
     window.localStorage.setItem('taxhelp-theme', nextTheme);
     window.dispatchEvent(new CustomEvent('taxhelp-theme-change', { detail: nextTheme }));
+    addActivityLog(`Changed theme to ${nextTheme}`);
   }
 
   return (
@@ -46,6 +48,30 @@ export default function Sidebar() {
           href="/admin/settings"
         >
           Settings
+        </Link>
+        <Link
+          className={router.pathname === '/admin/roles' ? styles.activeLink : styles.link}
+          href="/admin/roles"
+        >
+          Roles &amp; Permissions
+        </Link>
+        <Link
+          className={router.pathname === '/admin/data-management' ? styles.activeLink : styles.link}
+          href="/admin/data-management"
+        >
+          Data Management
+        </Link>
+        <Link
+          className={router.pathname === '/admin/reports' ? styles.activeLink : styles.link}
+          href="/admin/reports"
+        >
+          Reports
+        </Link>
+        <Link
+          className={router.pathname === '/admin/activity-logs' ? styles.activeLink : styles.link}
+          href="/admin/activity-logs"
+        >
+          Activity Logs
         </Link>
       </nav>
 

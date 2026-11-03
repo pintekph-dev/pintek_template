@@ -33,6 +33,212 @@
   color: $darkGreen;
 }
 
+.clearLogsButton {
+  @apply mt-4 rounded-md bg-red-100 px-4 py-2 text-sm font-semibold text-red-700 transition-colors hover:bg-red-200;
+}
+
+.logSearch {
+  @apply mt-4 block h-10 w-full max-w-sm rounded-md border px-3 text-sm;
+  border-color: $gray;
+  color: $black;
+}
+
+.rolesGrid {
+  @apply mt-6 grid grid-cols-3 gap-5 max-[900px]:grid-cols-2 max-[700px]:grid-cols-1;
+}
+
+.roleCard {
+  @apply rounded-lg border bg-white p-5 shadow-[0_2px_6px_rgb(0_0_0_/_0.05)];
+  border-color: $gray;
+}
+
+.roleHeader {
+  @apply flex items-start justify-between gap-3;
+}
+
+.roleHeader h3,
+.roleHeader p {
+  @apply m-0;
+}
+
+.roleHeader h3 {
+  @apply text-lg font-bold;
+  color: $black;
+}
+
+.roleHeader p {
+  @apply mt-1 text-sm;
+  color: $darkGreen;
+}
+
+.permissionCount {
+  @apply rounded-full bg-blue-100 px-2 py-1 text-xs font-semibold text-blue-700;
+}
+
+.permissionList {
+  @apply mt-5 flex flex-col gap-3 border-t pt-4;
+  border-color: $gray;
+}
+
+.permissionItem {
+  @apply flex cursor-pointer items-center gap-2 text-sm;
+  color: $black;
+}
+
+.permissionItem input {
+  @apply h-4 w-4 accent-blue-600;
+}
+
+.accountRoles {
+  @apply mt-6 rounded-lg border bg-white p-5 shadow-[0_2px_6px_rgb(0_0_0_/_0.05)];
+  border-color: $gray;
+}
+
+.accountRolesHeader {
+  @apply flex items-center justify-between gap-4 max-[700px]:flex-col max-[700px]:items-stretch;
+}
+
+.accountControls {
+  @apply flex items-center gap-2 max-[700px]:w-full;
+}
+
+.accountControls input,
+.addAccountForm input,
+.addAccountForm select {
+  @apply rounded-md border px-3 py-2 text-sm;
+  border-color: $gray;
+  color: $black;
+}
+
+.accountControls input {
+  @apply h-10 w-52 max-[700px]:min-w-0 max-[700px]:flex-1;
+}
+
+.accountControls .primaryButton {
+  @apply mt-0 h-10 whitespace-nowrap;
+}
+
+.addAccountForm {
+  @apply mt-5 grid grid-cols-[1.2fr_1.4fr_0.8fr_auto] items-center gap-3 border-t pt-5 max-[900px]:grid-cols-2 max-[700px]:grid-cols-1;
+  border-color: $gray;
+}
+
+.addAccountForm .primaryButton {
+  @apply mt-0;
+}
+
+.roleCounts {
+  @apply mt-4 flex flex-wrap gap-2;
+}
+
+.roleCounts span {
+  @apply rounded-full bg-blue-100 px-2 py-1 text-xs font-semibold text-blue-700;
+}
+
+.accountList {
+  @apply mt-5 border-t;
+  border-color: $gray;
+}
+
+.accountRow {
+  @apply grid grid-cols-[1fr_auto_auto] items-center gap-4 border-b py-4 last:border-b-0 max-[700px]:grid-cols-1 max-[700px]:items-stretch;
+  border-color: $gray;
+}
+
+.accountRow strong,
+.accountRow span {
+  @apply block;
+}
+
+.accountRow strong {
+  color: $black;
+}
+
+.accountRow span {
+  @apply mt-1 text-sm;
+  color: $darkGreen;
+}
+
+.accountRow select {
+  @apply h-10 min-w-32 rounded-md border px-3 py-2 text-sm;
+  border-color: $gray;
+  color: $black;
+}
+
+.deleteAccountButton {
+  @apply h-10 rounded-md bg-red-100 px-3 text-sm font-semibold text-red-700 transition-colors hover:bg-red-200;
+}
+
+.managementGrid {
+  @apply mt-6 grid grid-cols-3 gap-5 max-[900px]:grid-cols-2 max-[700px]:grid-cols-1;
+}
+
+.managementCard {
+  @apply rounded-lg border bg-white p-5 shadow-[0_2px_6px_rgb(0_0_0_/_0.05)];
+  border-color: $gray;
+}
+
+.managementCard h3,
+.managementCard p {
+  @apply m-0;
+}
+
+.managementCard h3 {
+  @apply text-lg font-bold;
+  color: $black;
+}
+
+.managementCard p {
+  @apply mt-2 min-h-10 text-sm;
+  color: $darkGreen;
+}
+
+.primaryButton {
+  @apply mt-5 rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-700;
+}
+
+.subscriptionData {
+  @apply mt-5 rounded-lg border bg-white p-5;
+  border-color: $gray;
+}
+
+.subscriptionDataRow {
+  @apply grid grid-cols-3 gap-4 border-b py-3 text-sm last:border-b-0;
+  border-color: $gray;
+}
+
+.subscriptionDataRow strong {
+  color: $black;
+}
+
+.subscriptionDataRow span {
+  color: $darkGreen;
+}
+
+.activityTable {
+  @apply mt-6 overflow-hidden rounded-lg border bg-white;
+  border-color: $gray;
+}
+
+.activityRow {
+  @apply grid grid-cols-[7rem_1fr_10rem] items-center gap-4 border-b px-5 py-4 text-sm last:border-b-0 max-[700px]:grid-cols-1 max-[700px]:gap-1;
+  border-color: $gray;
+}
+
+.activityRow strong {
+  color: $black;
+}
+
+.activityRow span,
+.activityRow time {
+  color: $darkGreen;
+}
+
+.emptyState {
+  @apply px-5 py-8 text-center text-sm;
+  color: $darkGreen;
+}
+
 .stats {
   @apply mt-6 grid grid-cols-3 gap-5 max-[700px]:grid-cols-1;
 }
@@ -322,6 +528,231 @@
   @apply bg-red-200;
 }
 
+.reportHeader {
+  @apply flex items-end justify-between gap-5 max-[700px]:items-start max-[700px]:flex-col;
+}
+
+.reportReady {
+  @apply mt-2 block text-xs font-semibold text-green-700;
+}
+
+.reportActions {
+  @apply flex flex-wrap gap-2;
+}
+
+.reportActions .primaryButton,
+.secondaryButton {
+  @apply mt-0 whitespace-nowrap;
+}
+
+.reportPeriod {
+  @apply h-10 rounded-md border bg-white px-3 text-sm;
+  border-color: $gray;
+  color: $black;
+}
+
+.secondaryButton {
+  @apply rounded-md border bg-white px-4 py-2 text-sm font-semibold;
+  border-color: $gray;
+  color: $black;
+}
+
+.reportKpis {
+  @apply mt-6 grid grid-cols-4 gap-4 max-[900px]:grid-cols-2 max-[700px]:grid-cols-1;
+}
+
+.reportKpi {
+  @apply rounded-lg border bg-white p-4 shadow-[0_2px_6px_rgb(0_0_0_/_0.05)];
+  border-color: $gray;
+}
+
+.reportKpi span,
+.reportKpi strong,
+.reportKpi small {
+  @apply block;
+}
+
+.reportKpi span {
+  @apply text-xs font-medium;
+  color: $darkGreen;
+}
+
+.reportKpi strong {
+  @apply mt-2 text-2xl;
+  color: $black;
+}
+
+.reportKpi small {
+  @apply mt-2 text-xs;
+}
+
+.positive {
+  color: #159447;
+}
+
+.negative {
+  color: #dc2626;
+}
+
+.reportMainGrid,
+.reportBottomGrid {
+  @apply mt-5 grid grid-cols-2 gap-5 max-[800px]:grid-cols-1;
+}
+
+.reportPanel {
+  @apply rounded-lg border bg-white p-5 shadow-[0_2px_6px_rgb(0_0_0_/_0.05)];
+  border-color: $gray;
+}
+
+.reportPanel h3 {
+  @apply m-0 text-base font-bold;
+  color: $black;
+}
+
+.reportPanelHeader {
+  @apply flex items-start justify-between gap-3;
+}
+
+.reportPanelHeader p {
+  @apply mt-1 text-xs;
+  color: $darkGreen;
+}
+
+.reportBadge {
+  @apply rounded-full bg-blue-50 px-2 py-1 text-xs font-semibold text-blue-700;
+}
+
+.revenueChart {
+  @apply mt-4 h-52 w-full;
+}
+
+.chartArea {
+  fill: #dbeafe;
+  opacity: 0.6;
+}
+
+.chartPath {
+  fill: none;
+  stroke: #2563eb;
+  stroke-linecap: round;
+  stroke-width: 3;
+}
+
+.chartAxis {
+  stroke: #d1d5db;
+  stroke-width: 1;
+}
+
+.chartText {
+  fill: #6b7280;
+  font-size: 11px;
+}
+
+.categoryContent {
+  @apply mt-5 flex items-center gap-6 max-[500px]:flex-col;
+}
+
+.reportDonut {
+  width: 170px;
+  height: 170px;
+  flex: 0 0 auto;
+  border-radius: 9999px;
+  background: conic-gradient(#2563eb 0 45%, #14b8a6 45% 80%, #f59e0b 80% 100%);
+  position: relative;
+}
+
+.reportDonut::after {
+  content: '';
+  position: absolute;
+  inset: 36px;
+  border-radius: 9999px;
+  background: white;
+}
+
+.reportLegend {
+  @apply flex min-w-0 flex-1 flex-col gap-3;
+}
+
+.reportLegendItem {
+  @apply grid grid-cols-[0.75rem_1fr_auto] items-center gap-2 text-xs;
+  color: $darkGreen;
+}
+
+.reportLegendItem strong {
+  color: $black;
+}
+
+.reportLegendDot {
+  @apply h-3 w-3 rounded-full;
+}
+
+.reportPremium {
+  background: #2563eb;
+}
+
+.reportStandard {
+  background: #14b8a6;
+}
+
+.reportFree {
+  background: #f59e0b;
+}
+
+.productTable {
+  @apply mt-4;
+}
+
+.productRow {
+  @apply grid grid-cols-[1fr_auto_4rem] items-center gap-3 border-b py-3 text-sm last:border-b-0;
+  border-color: $gray;
+}
+
+.productRow span {
+  color: $black;
+}
+
+.productRow strong {
+  color: $black;
+}
+
+.productRow small {
+  @apply text-right text-xs;
+}
+
+.alertItem {
+  @apply mt-4 flex items-center gap-3 text-sm;
+  color: $darkGreen;
+}
+
+.alertItem b {
+  @apply flex h-6 w-6 flex-none items-center justify-center rounded-full text-xs;
+}
+
+.alertWarning {
+  @apply bg-yellow-100 text-yellow-700;
+}
+
+.alertInfo {
+  @apply bg-blue-100 text-blue-700;
+}
+
+.alertSuccess {
+  @apply bg-green-100 text-green-700;
+}
+
+.executiveSummary {
+  @apply mt-5 rounded-lg border bg-blue-50 p-5;
+  border-color: #bfdbfe;
+}
+
+.executiveSummary h3 {
+  @apply m-0 text-base font-bold text-blue-900;
+}
+
+.executiveSummary ul {
+  @apply mb-0 mt-3 space-y-2 pl-5 text-sm text-blue-900;
+}
+
 .darkTheme {
   background: #111827;
 }
@@ -336,6 +767,8 @@
 }
 
 :global(body.adminDark) .statCard,
+:global(body.adminDark) .reportKpi,
+:global(body.adminDark) .reportPanel,
 :global(body.adminDark) .profitSummary,
 :global(body.adminDark) .tracker,
 :global(body.adminDark) .subscriptionChart,
@@ -345,13 +778,25 @@
 }
 
 :global(body.adminDark) .intro h2,
-:global(body.adminDark) .statCard strong {
+:global(body.adminDark) .statCard strong,
+:global(body.adminDark) .reportKpi strong,
+:global(body.adminDark) .reportPanel h3,
+:global(body.adminDark) .productRow span,
+:global(body.adminDark) .productRow strong {
   color: #f9fafb;
 }
 
 :global(body.adminDark) .intro p,
 :global(body.adminDark) .statCard span,
+:global(body.adminDark) .reportKpi span,
+:global(body.adminDark) .reportPanelHeader p,
+:global(body.adminDark) .reportLegendItem,
+:global(body.adminDark) .reportLegendItem strong,
+:global(body.adminDark) .alertItem,
 :global(body.adminDark) .profitSummary h3,
+:global(body.adminDark) .roleHeader h3,
+:global(body.adminDark) .managementCard h3,
+:global(body.adminDark) .activityRow strong,
 :global(body.adminDark) .financialValues strong,
 :global(body.adminDark) .trackerHeader h3,
 :global(body.adminDark) .chartLabel,
@@ -366,9 +811,67 @@
 }
 
 :global(body.adminDark) .trendChart,
+:global(body.adminDark) .reportKpi,
+:global(body.adminDark) .reportPanel,
+:global(body.adminDark) .roleCard,
+:global(body.adminDark) .accountRoles,
+:global(body.adminDark) .managementCard,
+:global(body.adminDark) .subscriptionData,
+:global(body.adminDark) .activityTable,
 :global(body.adminDark) .monthValue {
   border-color: #374151;
   background: #111827;
+}
+
+:global(body.adminDark) .roleHeader p,
+:global(body.adminDark) .permissionItem,
+:global(body.adminDark) .accountRoles,
+:global(body.adminDark) .accountRow strong,
+:global(body.adminDark) .managementCard p,
+:global(body.adminDark) .subscriptionDataRow strong,
+:global(body.adminDark) .subscriptionDataRow span,
+:global(body.adminDark) .activityRow span,
+:global(body.adminDark) .activityRow time {
+  color: #d1d5db;
+}
+
+:global(body.adminDark) .subscriptionDataRow {
+  border-color: #374151;
+}
+
+:global(body.adminDark) .permissionList {
+  border-color: #374151;
+}
+
+:global(body.adminDark) .accountList,
+:global(body.adminDark) .addAccountForm,
+:global(body.adminDark) .accountRow,
+:global(body.adminDark) .accountRow select {
+  border-color: #374151;
+}
+
+:global(body.adminDark) .accountControls input,
+:global(body.adminDark) .addAccountForm input,
+:global(body.adminDark) .addAccountForm select,
+:global(body.adminDark) .logSearch {
+  border-color: #374151;
+  color: #d1d5db;
+  background: #1f2937;
+}
+
+:global(body.adminDark) .accountRow span,
+:global(body.adminDark) .accountRow select {
+  color: #d1d5db;
+  background: #1f2937;
+}
+
+:global(body.adminDark) .deleteAccountButton {
+  background: #7f1d1d;
+  color: #fecaca;
+}
+
+:global(body.adminDark) .activityRow {
+  border-color: #374151;
 }
 
 :global(body.adminDark) .trendSummary strong,
@@ -382,6 +885,36 @@
 
 :global(body.adminDark) .trendPoint {
   fill: #4ade80;
+}
+
+:global(body.adminDark) .secondaryButton {
+  border-color: #374151;
+  background: #1f2937;
+  color: #f9fafb;
+}
+
+:global(body.adminDark) .reportPeriod {
+  border-color: #374151;
+  background: #1f2937;
+  color: #f9fafb;
+}
+
+:global(body.adminDark) .reportDonut::after {
+  background: #1f2937;
+}
+
+:global(body.adminDark) .productRow,
+:global(body.adminDark) .executiveSummary {
+  border-color: #374151;
+}
+
+:global(body.adminDark) .executiveSummary {
+  background: #172554;
+}
+
+:global(body.adminDark) .executiveSummary h3,
+:global(body.adminDark) .executiveSummary ul {
+  color: #dbeafe;
 }
 
 :global(body.adminDark) .subscriptionChart h3,

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import DashboardLayout from '@/components/admin/DashboardLayout';
+import { addActivityLog } from '@/lib/adminActivity';
 import styles from '@styles/admin/dashboard.module.scss';
 
 type User = {
@@ -38,7 +39,13 @@ export default function AdminUsers() {
   const [userList, setUserList] = useState(users);
 
   function handleDelete(id: number) {
-    setUserList((currentUsers) => currentUsers.filter((user) => user.id !== id));
+    const user = userList.find((currentUser) => currentUser.id === id);
+    if (!user || !window.confirm(`Delete ${user.name}'s account?`)) {
+      return;
+    }
+
+    setUserList((currentUsers) => currentUsers.filter((currentUser) => currentUser.id !== id));
+    addActivityLog(`Deleted user account: ${user.name}`);
   }
 
   function handleEdit(user: User) {
@@ -56,6 +63,7 @@ export default function AdminUsers() {
           : currentUser,
       ),
     );
+    addActivityLog(`Updated user account: ${user.name}`);
   }
 
   return (
