@@ -1,14 +1,9 @@
 
 .cards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 0.625rem;
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
+    @apply flex flex-row flex-wrap gap-2.5 mt-5 mb-5;
 
     .card {
-        box-sizing: border-box;
+        @apply box-border;
 
         &.w20 {
             width: calc((100% - 40px) / 5);

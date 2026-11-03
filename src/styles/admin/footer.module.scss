@@ -9,3 +9,9 @@
 .footer p {
   @apply m-0;
 }
+
+:global(body.adminDark) .footer {
+  border-color: #374151;
+  background: #1f2937;
+  color: #9ca3af;
+}

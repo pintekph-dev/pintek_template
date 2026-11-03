@@ -1,4 +1,5 @@
 @use '../colors' as *;
+@use './admin-helpers' as admin;
 
 .layout {
   @apply flex min-h-screen max-[700px]:block;
@@ -37,9 +38,8 @@
 }
 
 .statCard {
-  @apply rounded-lg border bg-white p-6 shadow-[0_2px_6px_rgb(0_0_0_/_0.05)];
-  border: 1px solid $gray;
-  background: $white;
+  @apply p-6;
+  @include admin.panel;
 }
 
 .statCard span,
@@ -55,4 +55,138 @@
 .statCard strong {
   @apply mt-3 text-[1.75rem];
   color: $black;
+}
+
+.tableWrapper {
+  @apply mt-6 overflow-x-auto;
+  @include admin.panel;
+}
+
+.userTable {
+  @apply w-full border-collapse text-left text-sm;
+}
+
+.userTable th,
+.userTable td {
+  @apply border-b px-5 py-4;
+  border-color: $gray;
+}
+
+.userTable th {
+  @apply bg-[#f7f9fb] font-semibold;
+  color: $black;
+}
+
+.userTable td {
+  color: $black;
+}
+
+.userTable tr:last-child td {
+  border-bottom: 0;
+}
+
+.actions {
+  @apply whitespace-nowrap;
+}
+
+.editButton,
+.deleteButton {
+  @include admin.action-button;
+}
+
+.editButton {
+  @apply bg-blue-100 text-blue-700;
+}
+
+.deleteButton {
+  @apply bg-red-100 text-red-700;
+}
+
+.editButton:hover {
+  @apply bg-blue-200;
+}
+
+.deleteButton:hover {
+  @apply bg-red-200;
+}
+
+.darkTheme {
+  background: #111827;
+}
+
+.darkTheme .main {
+  background: #111827;
+}
+
+:global(body.adminDark) .contentWrapper,
+:global(body.adminDark) .main {
+  background: #111827;
+}
+
+:global(body.adminDark) .statCard,
+:global(body.adminDark) .tableWrapper {
+  border-color: #374151;
+  background: #1f2937;
+}
+
+:global(body.adminDark) .intro h2,
+:global(body.adminDark) .statCard strong {
+  color: #f9fafb;
+}
+
+:global(body.adminDark) .intro p,
+:global(body.adminDark) .statCard span,
+:global(body.adminDark) .userTable td {
+  color: #d1d5db;
+}
+
+:global(body.adminDark) .userTable th {
+  background: #374151;
+  color: #f9fafb;
+}
+
+:global(body.adminDark) .userTable th,
+:global(body.adminDark) .userTable td {
+  border-color: #374151;
+}
+
+.statusPremium,
+.statusStandard,
+.statusFree {
+  @include admin.pill;
+}
+
+.statusPremium {
+  @apply bg-purple-100 text-purple-700;
+  color: #7e22ce;
+}
+
+.statusStandard {
+  @apply bg-blue-100 text-blue-700;
+  color: #1d4ed8;
+}
+
+.statusFree {
+  @apply bg-gray-100 text-gray-700;
+  color: #374151;
+}
+
+.statusActive,
+.statusInactive {
+  @include admin.pill;
+}
+
+.statusActive {
+  @apply bg-green-100 text-green-700;
+  color: #15803d;
+}
+
+.statusInactive {
+  @apply bg-gray-100 text-gray-700;
+  color: #374151;
+}
+
+.statusDot {
+  @apply h-2 w-2 rounded-full bg-current;
+  flex: 0 0 auto;
 }

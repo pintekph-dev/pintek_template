@@ -30,3 +30,12 @@
 .logoutButton:hover {
   @apply bg-[#0e7490];
 }
+
+:global(body.adminDark) .header {
+  border-color: #374151;
+  background: #1f2937;
+}
+
+:global(body.adminDark) .header h1 {
+  color: #f9fafb;
+}

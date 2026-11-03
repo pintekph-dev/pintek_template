@@ -1,8 +1,9 @@
 @use '../colors' as *;
 
 .sidebar {
-  @apply min-h-screen w-60 p-6 px-4 max-[700px]:min-h-0 max-[700px]:w-auto;
+  @apply flex min-h-screen w-60 flex-col border-r-2 p-6 px-4 max-[700px]:min-h-0 max-[700px]:w-auto;
   background: $blue;
+  border-color: #005b91;
   color: $white;
 }
 
@@ -24,4 +25,29 @@
 .link:hover,
 .activeLink {
   @apply bg-[#0e7490];
+}
+
+:global(body.adminDark) .sidebar {
+  background: #111827;
+  border-color: #374151;
+}
+
+.themeToggle {
+  @apply mt-auto flex w-full cursor-pointer items-center justify-between border-0 bg-transparent p-3 text-left text-sm text-white;
+}
+
+.toggle {
+  @apply flex h-5 w-9 items-center rounded-full bg-gray-300 p-0.5;
+}
+
+.toggleOn {
+  @apply bg-green-400;
+}
+
+.toggleKnob {
+  @apply h-4 w-4 rounded-full bg-white transition-transform;
+}
+
+.toggleOn .toggleKnob {
+  @apply translate-x-4;
 }

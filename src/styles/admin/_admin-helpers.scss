@@ -1,0 +1,14 @@
+@use '../colors' as *;
+
+@mixin panel {
+  @apply rounded-lg border bg-white shadow-[0_2px_6px_rgb(0_0_0_/_0.05)];
+  border-color: $gray;
+}
+
+@mixin pill {
+  @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold;
+}
+
+@mixin action-button {
+  @apply mr-2 cursor-pointer rounded-md border-0 px-3 py-1 text-xs font-semibold;
+}
