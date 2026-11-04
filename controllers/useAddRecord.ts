@@ -45,9 +45,8 @@ const useAddRecord = () => {
             (
                 {
                     email: {
-                        usename: 'Email',
                         required: true,
-                        email: true,
+                        usename: 'Email',
                     },
                     firstName: {
                         usename: 'First Name',
