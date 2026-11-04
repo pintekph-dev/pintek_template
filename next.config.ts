@@ -1,9 +1,16 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  devIndicators: false,
+const nextConfig: NextConfig = { devIndicators: false,
+  turbopack: {
+    rules: {
+      "*.css": {
+        loaders: ["@tailwindcss/turbopack"],
+        as: "*.css",
+      },
+    },
+  },
   reactStrictMode: true,
-  allowedDevOrigins: ['192.168.1.2'],
+  allowedDevOrigins: ['100.67.165.3'],
 };
 
-export default nextConfig;
+module.exports = nextConfig
